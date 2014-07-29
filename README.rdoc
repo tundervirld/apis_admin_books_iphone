@@ -1,0 +1,13 @@
+== README
+
+
+curl -X DELETE  http://localhost:3000/courses/6.json
+
+
+curl -d "course[course]=CursoAndroidBasico&course[teacher]=Lacano" http://localhost:3000/courses.json
+
+c = Category.all
+
+c.each do |cat|
+  puts "Category.create(:name => '#{cat.name}')"
+end

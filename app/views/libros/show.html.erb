@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @libro.nombre %>
+</p>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @libro.autor %>
+</p>
+
+<p>
+  <strong>Publicado:</strong>
+  <%= @libro.publicado %>
+</p>
+
+<p>
+  <strong>Genero:</strong>
+  <%= @libro.genero %>
+</p>
+    <strong>url:</strong>
+    <%= @libro.portada.url %>
+<p>
+</p>
+    <strong>url_medium:</strong>
+    <%= @libro.portada.url(:medium) %>
+<p>
+</p>
+    <strong>url_thumb:</strong>
+    <%= @libro.portada.url(:thumb) %>
+<p>
+
+</p>
+<%= image_tag @libro.portada.url %>
+<%= image_tag @libro.portada.url(:medium) %>
+<%= image_tag @libro.portada.url(:thumb) %>
+
+<%= link_to 'Edit', edit_libro_path(@libro) %> |
+<%= link_to 'Back', libros_path %>
